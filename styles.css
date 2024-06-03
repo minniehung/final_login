@@ -1,0 +1,197 @@
+/* 基本樣式 */
+body {
+    background: #ffffff;
+    font-family: ulp-font, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
+}
+
+.login-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+}
+
+.header img {
+    max-width: 190px;
+    height: auto;
+    margin-top: 55px;
+    margin-bottom: 100px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+.continue-button {
+    width: calc(80% - 20px); /* 調整寬度 */
+    height: 50px;
+    line-height: 40px;
+    padding: 0 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-indent: 10px;
+    transition: border-color 0.3s, background-color 0.3s; /* 添加背景色過渡效果 */
+}
+
+.continue-button {
+    background-color: #10a37f;
+    color: white;
+    border: 1px solid #10a37f;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button:hover {
+    filter: brightness(95%);
+}
+
+.signup-link {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.signup-link a {
+    color: #10a37f;
+    text-decoration: none;
+}
+
+.or-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.or-separator::before,
+.or-separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.or-separator:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.or-separator:not(:empty)::after {
+    margin-left: .25em;
+}
+
+.or-separator span {
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: calc(80% - 20px); /* 調整寬度 */
+    height: 50px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.social-buttons button img {
+    margin-left: 15px;
+    margin-right: 15px;
+    max-width: 20px;
+}
+
+.social-buttons button:hover {
+    background-color: #f2f2f2;
+}
+
+.continue-google,
+.continue-microsoft,
+.continue-apple {
+    font-size: 15px;
+}
+
+.link {
+    margin-top: 150px;
+}
+
+.link a {
+    color: #10a37f;
+    text-decoration: none;
+}
+
+/* 您提出的更改 */
+.input-container {
+    position: relative;
+    width: calc(80% - 20px); /* 調整寬度 */
+}
+
+.input-container input {
+    width: 100%;
+    height: 50px; /* 將高度設置為50px，與其他按鈕一樣 */
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* 添加邊框顏色過渡效果 */
+}
+
+.input-container input:focus,
+.input-container input:valid {
+    border-color: #7ed6bf; /* 修改為淺綠色 */
+    border-width: 1px; /* 修復邊框的粗細問題 */
+}
+
+.input-container input:focus {
+    border-color: #7ed6bf !important; /* 聚焦時邊框顏色變為淺綠色 */
+}
+
+.input-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #000000;
+    pointer-events: none;
+    transition: all 0.3s ease-out;
+    padding: 0 5px;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.input-container input:focus + .input-label,
+.input-container input:valid + .input-label {
+    top: -10px;
+    font-size: 14px; /* 增加字體大小 */
+    background-color: #ffffff;
+    padding: 0 5px;
+    border-radius: 3px;
+    color: #10a37f; /* 聚焦後顏色變成和按鈕一樣的顏色 */
+}
